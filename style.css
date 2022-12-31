@@ -1,0 +1,144 @@
+:root{
+ --blue:darkblue;
+ --font-blue: rgb(0, 0, 205);
+ --lightblue:hsl(200,50%,75%);
+ --darkblue:hsl(200,60%,70%);
+ --hue:hsl(200,100%,75%);
+}
+
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  outline:none;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* text-transform: uppercase; */
+}
+body{
+  background:linear-gradient(to right,skyblue,rgb(184, 230, 248));
+
+  /* background-repeat: no-repeat; */
+  /* height: auto; */
+  font-family: sans-serif;
+  color: darkblue;
+  margin: 0;
+  padding: 1rem;
+  min-width:420px ;
+}
+.blured{
+  -webkit-filter: blur(3px);
+  filter: blur(10%);
+}
+/* header section starts */
+.header{
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem ;
+
+}
+.header-left{
+  width:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-icon{
+  height: 40px;
+  width:40px;
+  margin-right: 2rem;
+}
+.large{
+  height:120px;
+  width:120px;
+}
+.header-temp{
+  font-size: 2.5rem;
+}
+.header-right{
+  width:50%;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: repeat(2,auto);
+  gap:1rem;
+  border-left: 3px solid darkblue;
+  padding:0 2rem;
+}
+.data-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:0.5rem;
+}
+.data-info .label{
+  font-size: 0.8rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--font-blue);
+}
+/* units */
+.data-info .unit{
+  margin-left: 0.2rem;
+}
+/* header section ends */
+/* day-weather starts */
+.day-weather{
+  display: grid;
+
+  margin:5rem auto;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fit,115px);
+  /* grid-template-rows: repeat(2,auto); */
+  justify-content: center;
+
+}
+.day-weather-card{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  height: 9rem;
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid darkblue;
+  border-radius: 0.5rem;
+  /* width: fit-content; */
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.day-weather-card img{
+  margin: auto;
+}
+.day-card-day{
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color:var(--font-blue);
+}
+/* day weather ends */
+/* hour section starts*/
+.hour-section{
+  width:100%;
+  text-align:center;
+  height: auto;
+  border-spacing: 0;
+}
+.hour-row{
+  margin-top: 2rem;
+  background-color: var(--darkblue);
+  height: 4rem;
+}
+.hour-row:nth-child(2n)
+{
+  background-color: var(--lightblue);
+}
+.hour-row>td{
+  padding:0.5rem;
+  /* width: 100%; */
+}
+/* hour section ends*/
+
